@@ -11,7 +11,7 @@
 		<nav aria-label="breadcrumb">
 			<ul class="breadcrumb">
 				<li class="breadcrumb-item active" aria-current="page">
-				  	<span></span> View Attendances <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+				  	<span></span>Attendances <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
 				</li>
 			</ul>
 		</nav>
@@ -20,7 +20,7 @@
         <div class="col-lg-12 grid-margin stretch-card">
         	<div class="card">
           <div class="card-body">
-            <h4 class="card-title">BSIT</h4>
+            <h4 class="card-title">SSC</h4>
             </p>
             <table class="table table-hover">
               <thead>

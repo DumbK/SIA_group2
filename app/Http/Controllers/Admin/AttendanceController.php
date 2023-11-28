@@ -9,7 +9,7 @@ use GuzzleHttp\Client;
 class AttendanceController extends Controller
 {
     public function attendance() {
-		$auth = 'Janel_Janast_Astillero2023';
+		$auth = 'Korina_Bernido2023';
 
 		// API endpoint
 		$apiEndpoint = 'https://ssc.slsubc.com/api/attendance/log';

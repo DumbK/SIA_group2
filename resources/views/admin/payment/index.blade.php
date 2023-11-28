@@ -1,78 +1,62 @@
 @extends('layouts.default')
 
 @section('content')
-	<div class="content-wrapper">
-      <div class="page-header">
-        <h3 class="page-title">
-          <span class="page-title-icon bg-gradient-primary text-white me-2">
-            <i class="mdi mdi-home"></i>
-          </span> {{ $pagetitle }}
-        </h3>
-        <nav aria-label="breadcrumb">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">
-              <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      	<div class="row">
-        	<div class="col-lg-12 grid-margin stretch-card">
-      			<a href="{{ route('payment.search') }}" class="btn btn-gradient-success btn-rounded btn-fw">Search</a>
-        	</div>
-    	</div>
-      <div class="row">
-        <div class="col-lg-12 grid-margin stretch-card">
-        	<div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Hoverable Table</h4>
-            <!-- <p class="card-description"> Add class <code>.table-hover</code>
-            </p> -->
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>User</th>
-                  <th>Product</th>
-                  <th>Sale</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Jacob</td>
-                  <td>Photoshop</td>
-                  <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i></td>
-                  <td><label class="badge badge-danger">Pending</label></td>
-                </tr>
-                <tr>
-                  <td>Messsy</td>
-                  <td>Flash</td>
-                  <td class="text-danger"> 21.06% <i class="mdi mdi-arrow-down"></i></td>
-                  <td><label class="badge badge-warning">In progress</label></td>
-                </tr>
-                <tr>
-                  <td>John</td>
-                  <td>Premier</td>
-                  <td class="text-danger"> 35.00% <i class="mdi mdi-arrow-down"></i></td>
-                  <td><label class="badge badge-info">Fixed</label></td>
-                </tr>
-                <tr>
-                  <td>Peter</td>
-                  <td>After effects</td>
-                  <td class="text-success"> 82.00% <i class="mdi mdi-arrow-up"></i></td>
-                  <td><label class="badge badge-success">Completed</label></td>
-                </tr>
-                <tr>
-                  <td>Dave</td>
-                  <td>53275535</td>
-                  <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
-                  <td><label class="badge badge-warning">In progress</label></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        	</div>
-      	</div>
-      </div>
-  </div>
+<div class="content-wrapper">
+    <div class="page-header">
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <form action="{{ route('payment.search') }}" method="GET" class="d-flex align-items-center">
+                <div class="mr-3">
+                    <label for="idNumber" class="form-label">ID Number:</label>
+                    <input type="text" class="form-control" placeholder="Enter ID Number" name="idNumber" id="idNumber">
+                </div>
+                <div class="mr-3">
+                    <label for="semester" class="form-label">Semester:</label>
+                    <input type="text" class="form-control" placeholder="Enter Semester" name="semester" id="semester">
+                </div> 
+                <div class="mr-3">
+                    <label for="academic year" class="form-label">Academic Year:</label>
+                    <input type="text" class="form-control" placeholder="Enter Academic Year" name="academic year" id="academic year">
+                </div>
+                <div class="mr-3">
+                    <label for="course" class="form-label">Course:</label>
+                    <select class="form-control" style="padding: 16px;" name="course" id="course" >
+                        @if($courses = App\Models\Course::get())
+                            @foreach($courses as $course)
+                                <option value="{{ $course->id}}">{{ $course->courses_name}}</option>
+                            @endforeach
+                        @endif
+                    </select>
+                </div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 d-flex justify-content-end">
+            <button class="btn btn-primary mt-4">Search</button>
+        </div>
+    </div></form>
+    <!-- Student Information Section -->
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Student Information</h4>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID<th>
+                                    <th>ID Number</th>
+                                    <th>Full Name</th>
+                                    <th>Course</th>
+                                    <th>A.Y.</th>
+                                    <th>Semester</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+    <!-- Rest of your content goes here -->
+</div>
 @endsection
