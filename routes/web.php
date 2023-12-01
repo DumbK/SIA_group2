@@ -42,7 +42,7 @@ Route::prefix('attendances')->middleware(['auth'])->group(function(){
 Route::prefix('courses')->middleware(['auth'])->group(function(){
      Route::get('/', [App\Http\Controllers\Admin\CoursesController::class, 'index'])->name('courses.index');
     Route::get('/create', [App\Http\Controllers\Admin\CoursesController::class, 'create'])->name('courses.create');
-     Route::get('/save', [App\Http\Controllers\Admin\CoursesController::class, 'save'])->name('courses.save');
+     Route::post('/save', [App\Http\Controllers\Admin\CoursesController::class, 'save'])->name('courses.save');
       Route::get('/view/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'view'])->name('courses.view');
        Route::get('/delete/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'delete'])->name('courses.delete');
 
