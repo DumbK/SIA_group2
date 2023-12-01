@@ -27,6 +27,15 @@ class CoursesController extends Controller
         ]);
     }
 
+    public function save(Request $request)
+    {
+        $savecourse = new Course;
+        $savecourse->courses_name = $request->course_name;
+        if ($savecourse->save()) {
+            return redirect()->back();
+        }
+    }
+
     public function view(Request $request)
     {
         $courses = Course::find($request->id);

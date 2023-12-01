@@ -12,7 +12,7 @@
                   @csrf
                   <div class="form-group">
                     <label for="courses">Course Name</label>
-                    <input type="text" name="courses" class="form-control" id="courses">
+                    <input type="text" name="course_name" class="form-control" id="courses">
                   </div>
                   <div class="col-lg-12 d-flex justify-content-end" >
                     <button type="submit" class="btn btn-primary" >Add</button>
