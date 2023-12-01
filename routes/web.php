@@ -47,6 +47,6 @@ Route::prefix('courses')->middleware(['auth'])->group(function(){
        Route::get('/delete/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'delete'])->name('courses.delete');
 
         Route::get('/edit/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'edit'])->name('courses.edit');
-         Route::get('/update', [App\Http\Controllers\Admin\CoursesController::class, 'update'])->name('courses.update');
+         Route::post('/update', [App\Http\Controllers\Admin\CoursesController::class, 'update'])->name('courses.update');
 });
 

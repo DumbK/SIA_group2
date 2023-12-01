@@ -35,6 +35,14 @@ class CoursesController extends Controller
             return redirect()->back();
         }
     }
+    public function update(Request $request)
+    {
+        $savecourse = Course::find($request->id);
+        $savecourse->courses_name = $request->course_name;
+        if ($savecourse->save()) {
+            return redirect()->back();
+        }
+    }
 
     public function view(Request $request)
     {
@@ -44,6 +52,23 @@ class CoursesController extends Controller
             'pagetitle' => 'View',
             'title' => 'View | Admin',
             'courses' => $courses
+        ]);
+    }
+
+    public function delete(Request $request)
+    {
+        $courses = Course::find($request->id);
+        if ($courses->delete()) {
+            return redirect()->back();
+        }
+    }
+    public function edit(Request $request)
+    {
+        $course = Course::find($request->id);
+        return view('admin.courses.edit', [
+            'pagetitle' => 'View',
+            'title' => 'View | Admin',
+            'course' => $course
         ]);
     }
 }
