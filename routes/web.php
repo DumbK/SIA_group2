@@ -40,7 +40,7 @@ Route::prefix('attendances')->middleware(['auth'])->group(function(){
 	Route::get('/logs', [App\Http\Controllers\Admin\AttendanceController::class, 'attendance'])->name('attendance.log');
 });
 Route::prefix('courses')->middleware(['auth'])->group(function(){
-     Route::get('/', [App\Http\Controllers\Admin\CoursesController::class, 'default'])->name('courses.default');
+     Route::get('/', [App\Http\Controllers\Admin\CoursesController::class, 'index'])->name('courses.index');
     Route::get('/create', [App\Http\Controllers\Admin\CoursesController::class, 'create'])->name('courses.create');
      Route::get('/save', [App\Http\Controllers\Admin\CoursesController::class, 'save'])->name('courses.save');
       Route::get('/view/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'view'])->name('courses.view');

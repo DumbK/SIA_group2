@@ -4,11 +4,6 @@
 
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title">
-            <span class="page-title-icon bg-gradient-primary text-white me-2">
-                <i class="mdi mdi-home"></i>
-            </span> Dashboard
-        </h3>
         <nav aria-label="breadcrumb">
             <!-- Breadcrumb content goes here if needed -->
         </nav>
@@ -33,27 +28,19 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>ID Number</th>
-                                    <th>Full Name</th>
                                     <th>Course</th>
-                                    <th>A.Y.</th>
-                                    <th>Semester</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($courses as $courses)
+                                @foreach($courses as $course)
                                 <tr>
-                                    <td>{{ $courses->id }}</td>
-                                    <td>{{ $courses->id_number }}</td>
-                                    <td>{{ $courses->full_name }}</td>
-                                    <td>{{ $courses->course }}</td>
-                                    <td>{{ $courses->ay }}</td>
-                                    <td>{{ $courses->semester }}</td>
+                                    <td>{{ $course->id }}</td>
+                                    <td>{{ $course->courses_name }}</td>
                                     <td>
-                                        <a href="{{ route('courses.view', ['id'=> $courses->id]) }}">View</a>
-                                        <a href="{{ route('courses.delete', ['id'=> $courses->id]) }}">Delete</a>
-                                        <a href="{{ route('courses.edit', ['id'=> $courses->id]) }}">Edit</a>
+                                        <a href="{{ route('courses.view', ['id'=> $course->id]) }}">View</a>
+                                        <a href="{{ route('courses.delete', ['id'=> $course->id]) }}">Delete</a>
+                                        <a href="{{ route('courses.edit', ['id'=> $course->id]) }}">Edit</a>
                                     </td>
                                 </tr>
                                 @endforeach

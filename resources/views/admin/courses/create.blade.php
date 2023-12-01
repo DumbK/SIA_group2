@@ -11,32 +11,9 @@
 
                   @csrf
                   <div class="form-group">
-                    <label for="courses">Courses</label>
+                    <label for="courses">Course Name</label>
                     <input type="text" name="courses" class="form-control" id="courses">
                   </div>
-                  <div class="form-group">
-                    <label for="id_num">Id Number</label>
-                    <input type="text" name="id_num" class="form-control" id="id_num" >
-                  </div>
-                  <div class="form-group">
-                    <label for="full_name">Full Name</label>
-                    <input type="text" name="full_name" class="form-control" id="full_name">
-                  </div>
-                  <div class="form-group">
-                    <label for="course">Course</label>
-                    <input type="text" name="course" class="form-control" id="course" >
-                  </div> 
-                  <div class="form-group">
-                    <label for="ay">A.Y.</label>
-                    <input type="number" name="ay" class="form-control" id="ay" >
-                  </div>   
-                  <div class="form-group">
-                    <label for="semester">Semester</label>
-                    <input type="text" name="semester" class="form-control" id="semester">
-                  </div>                
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                  <button class="btn btn-primary">Cancel</button>
                 </form>
               </div>
 

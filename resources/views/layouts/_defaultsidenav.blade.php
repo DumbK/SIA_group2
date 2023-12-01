@@ -35,7 +35,7 @@
         <div class="collapse" id="general-pages" style="">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ route('attendance.log') }}">Attendances</a></li>
-            <li class="nav-item"> <a class="nav-link" href="{{ route('courses.create') }}">Courses</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('courses.index') }}">Courses</a></li>
           </ul>
         </div>
     </li>

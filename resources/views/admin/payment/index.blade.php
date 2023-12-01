@@ -18,6 +18,14 @@
                 <div class="mr-3">
                     <label for="academic year" class="form-label">Academic Year:</label>
                     <input type="text" class="form-control" placeholder="Enter Academic Year" name="academic year" id="academic year">
+                </div> 
+                <div class="mr-3">
+                    <label for="academic year" class="form-label">First Name:</label>
+                    <input type="text" class="form-control" placeholder="Enter First Name" name="first name" id="first name">
+                </div> 
+                <div class="mr-3">
+                    <label for="last name" class="form-label">Last Name:</label>
+                    <input type="text" class="form-control" placeholder="Enter Last Name" name="last name" id="last name">
                 </div>
                 <div class="mr-3">
                     <label for="course" class="form-label">Course:</label>
