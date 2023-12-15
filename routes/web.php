@@ -27,26 +27,26 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 
-Route::prefix('dashboard')->middleware(['auth'])->group(function(){
-	Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
-});
+Route::prefix('admin')->middleware(['auth'])->group(function(){
+    // Dashboard
+	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
+    
+    // Payment
+    Route::get('/payment', [App\Http\Controllers\Admin\ListController::class, 'index'])->name('payment.index');
+    Route::get('/payment/search', [App\Http\Controllers\Admin\ListController::class, 'payment'])->name('payment.search');
+    
+    // Attendances
+    Route::get('/attendances/logs', [App\Http\Controllers\Admin\AttendanceController::class, 'attendance'])->name('attendance.log');
 
-Route::prefix('payment')->middleware(['auth'])->group(function(){
-	Route::get('/', [App\Http\Controllers\Admin\ListController::class, 'index'])->name('payment.index');
-	Route::get('/search', [App\Http\Controllers\Admin\ListController::class, 'payment'])->name('payment.search');
-});
-
-Route::prefix('attendances')->middleware(['auth'])->group(function(){
-	Route::get('/logs', [App\Http\Controllers\Admin\AttendanceController::class, 'attendance'])->name('attendance.log');
-});
-Route::prefix('courses')->middleware(['auth'])->group(function(){
-     Route::get('/', [App\Http\Controllers\Admin\CoursesController::class, 'index'])->name('courses.index');
+    // Courses
+    Route::get('/courses/', [App\Http\Controllers\Admin\CoursesController::class, 'index'])->name('courses.index');
     Route::get('/create', [App\Http\Controllers\Admin\CoursesController::class, 'create'])->name('courses.create');
-     Route::post('/save', [App\Http\Controllers\Admin\CoursesController::class, 'save'])->name('courses.save');
-      Route::get('/view/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'view'])->name('courses.view');
-       Route::get('/delete/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'delete'])->name('courses.delete');
-
-        Route::get('/edit/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'edit'])->name('courses.edit');
-         Route::post('/update', [App\Http\Controllers\Admin\CoursesController::class, 'update'])->name('courses.update');
+    Route::post('/save', [App\Http\Controllers\Admin\CoursesController::class, 'save'])->name('courses.save');
+    Route::get('/view/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'view'])->name('courses.view');
+    Route::get('/delete/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'delete'])->name('courses.delete');
+    Route::get('/edit/{id}', [App\Http\Controllers\Admin\CoursesController::class, 'edit'])->name('courses.edit');
+    Route::post('/update', [App\Http\Controllers\Admin\CoursesController::class, 'update'])->name('courses.update');
+    
 });
+
 
