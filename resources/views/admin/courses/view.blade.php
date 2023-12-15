@@ -11,28 +11,8 @@
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <td class="font-weight-bold">Id:</td>
-                                    <td>{{ $courses->id }}</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">Id Number:</td>
-                                    <td>{{ $courses->id_number }}</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">Full Name:</td>
-                                    <td>{{ $courses->full_name }}</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">Course:</td>
-                                    <td>{{ $courses->course }}</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">A.Y.:</td>
-                                    <td>{{ $courses->ay }}</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-weight-bold">Semester:</td>
-                                    <td>{{ $courses->semester }}</td>
+                                    <td class="font-weight-bold">Course Name:</td>
+                                    <td>{{ $courses->courses_name }}</td>
                                 </tr>
                             </tbody>
                         </table>

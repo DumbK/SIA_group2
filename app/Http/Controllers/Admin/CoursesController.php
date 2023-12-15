@@ -47,7 +47,6 @@ class CoursesController extends Controller
     public function view(Request $request)
     {
         $courses = Course::find($request->id);
-
         return view('admin.courses.view', [
             'pagetitle' => 'View',
             'title' => 'View | Admin',
