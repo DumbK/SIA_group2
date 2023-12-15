@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-
 <div class="content-wrapper">
     <div class="page-header">
         <nav aria-label="breadcrumb">
@@ -38,9 +37,11 @@
                                     <td>{{ $course->id }}</td>
                                     <td>{{ $course->courses_name }}</td>
                                     <td>
-                                        <a href="{{ route('courses.view', ['id'=> $course->id]) }}">View</a>
-                                        <a href="{{ route('courses.delete', ['id'=> $course->id]) }}">Delete</a>
-                                        <a href="{{ route('courses.edit', ['id'=> $course->id]) }}">Edit</a>
+                                        <div class="btn-group" role="group">
+                                            <a href="{{ route('courses.view', ['id'=> $course->id]) }}" class="btn btn-info btn-sm">View</a>
+                                            <a href="{{ route('courses.delete', ['id'=> $course->id]) }}" class="btn btn-danger btn-sm">Delete</a>
+                                            <a href="{{ route('courses.edit', ['id'=> $course->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

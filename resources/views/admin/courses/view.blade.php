@@ -6,32 +6,38 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Course</h4>
-                    <div class="form-group">
-                        <label>Id:</label>
-                        <h4>{{ $courses->id}}</h4>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="font-weight-bold">Id:</td>
+                                    <td>{{ $courses->id }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Id Number:</td>
+                                    <td>{{ $courses->id_number }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Full Name:</td>
+                                    <td>{{ $courses->full_name }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Course:</td>
+                                    <td>{{ $courses->course }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">A.Y.:</td>
+                                    <td>{{ $courses->ay }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Semester:</td>
+                                    <td>{{ $courses->semester }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="form-group">
-                        <label>Id Number:</label>
-                        <h4>{{ $courses->id_number }}</h4>
-                    </div>
-                    <div class="form-group">
-                        <label>Full Name:</label>
-                        <h4>{{ $courses->full_name }}</h4>
-                    </div>
-                    <div class="form-group">
-                        <label>Course:</label>
-                        <h4>{{ $courses->course }}</h4>
-                    </div>
-                    <div class="form-group">
-                        <label>A.Y.:</label>
-                        <h4>{{ $courses->ay }}</h4>
-                    </div>
-                    <div class="form-group">
-                        <label>Semester:</label>
-                        <h4>{{ $courses->semester }}</h4>
-                    </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

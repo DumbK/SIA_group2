@@ -20,5 +20,6 @@ class ListController extends Controller
     		'pagetitle' => 'Search',
     		'title' => 'Search | Admin'
     	]);
+    
     }
 }
