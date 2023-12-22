@@ -1,7 +1,7 @@
 <!-- partial:partials/_navbar.html -->
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-    <h3 class="navbar-title">SSC FINE SYSTEM</h3>
+    <h3 class="navbar-title">SSC FINES SYSTEM</h3>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-stretch">
     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -11,7 +11,6 @@
       <li class="nav-item nav-profile dropdown">
         <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
           <div class="nav-profile-img">
-            <img src="assets/images/faces/face1.jpg" alt="image">
             <span class="availability-status online"></span>
           </div>
           <div class="nav-profile-text">

@@ -21,20 +21,26 @@
                     <input type="text" class="form-control" placeholder="Enter Lastname" name="lastname" id="lastname">
                 </div>  
                 <div class="mr-3">
-                    <label for="academic year" class="form-label">Academic Year:</label>
-                    <input type="text" class="form-control" placeholder="Enter Academic Year" name="academic year" id="academic year">
-                </div> 
+                    <label class="form-label">A.Y</label>
+                    <select class="form-control text-dark mt-8" name="acadyear" id="ay" style="padding: 16px;">
+                            <option value="2023-2024">2023-2024</option> 
+                    </select>
+                </div>
                 <div class="mr-3">
-                    <label for="semester" class="form-label">Semester</label>
-                    <input type="text" class="form-control" placeholder="Enter Semester" name="semester" id="semester">
-                </div>  
+                    <label class="form-label">Semester</label>
+                    <select class="form-control text-dark mt-8" name="semester" id="semester" style="padding: 16px; width: 60px;">
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                    </select>
+                </div>
+                <div class="mr-3">
+                    <div class="col-sm-12 d-flex justify-content-end">
+                        <button class="btn btn-primary mt-4">Search</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 d-flex justify-content-end">
-            <button class="btn btn-primary mt-4">Search</button>
-        </div>
-    </div></form>
+    </form>
     <!-- Student Information Section -->
     <div class="row mt-4">
         <div class="col-lg-12">
@@ -61,7 +67,7 @@
                                       <td>{{ $value['first_name'] }}</td>
                                       <td>{{ $value['last_name'] }}</td>
                                       <td>{{ $value['course']['course'] }}</td>
-                                      <td><a class="btn btn-primary" href="">Pay</td>
+                                      <td><a class="btn btn-primary" href="{{ route('payment.billings',['id'=> $value['id'],'acadyear'=>$value['academicyear'],'semester'=>$value['semester'] ]) }}">View</a></td>
                                     </tr>
                                     @endif
                                 @endforeach
